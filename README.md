@@ -9,32 +9,30 @@
 ## 配置
 
 ```json
-...
 {
     "name": "Go",
     "build": {
         "dockerfile": "Dockerfile",
         "args": {
-            "VARIANT": "1.18", // 指定golang版本
-            "CHANGE_SOURCE": "false", // 是否使用apt国内源加速下载
-            "PROTOBUFF_VERSION": "3.17.3", // protobuff版本
+            "VARIANT": "1.18",               // 指定golang版本
+            "CHANGE_SOURCE": "false",        // 是否使用apt国内源加速下载
+            "PROTOBUFF_VERSION": "3.17.3",   // protobuff版本
             "PROTO_GEN_GO_VERSION": "1.28.0" // proto_gen_go扩展版本
         }
     },
     "customizations": {
         "vscode": {
             "settings": {},
-            "extensions": [ // 指定vscod插件
+            "extensions": [
                 "golang.go",
                 "bungcip.better-toml",
                 "donjayamanne.githistory",
                 "eamodio.gitlens",
                 "zxh404.vscode-proto3",
-                // ... 可以在这里加上指定的插件
+                // ... 可以在这里加上自定义插件的ID
             ]
         }
     },
-	...
 }
 ```
 
