@@ -9,9 +9,14 @@ RUN if [ ${CHANGE_SOURCE} = true ]; then \
     && sed -i "s@http://\(deb\|security\).debian.org@https://mirrors.163.com@g" /etc/apt/sources.list \
 ;fi
 
+# set env
 ENV TZ="Asia/Shanghai" \
     LANG="en_US.UTF-8" \
     LC_ALL="en_US.UTF-8"
+
+# set timezone
+RUN cp /usr/share/zoneinfo/${TZ} /etc/localtime \
+    && echo "${TZ}" > /etc/timezone
 
 # init
 RUN apt-get update && \
