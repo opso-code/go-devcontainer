@@ -8,7 +8,8 @@
 			"VARIANT": "1.18",
 			"CHANGE_SOURCE": "true",
 			"PROTOBUFF_VERSION": "3.17.3",
-			"PROTO_GEN_GO_VERSION": "1.28.0"
+			"PROTO_GEN_GO_VERSION": "1.28.0",
+			"PROTOC_GEN_GRPC_GATEWAY": "2.12.0",
 		}
 	},
 	"customizations": {
@@ -16,7 +17,7 @@
 			"settings": {},
 			"extensions": [
 				"golang.go",
-				"bungcip.better-toml",
+				"tamasfe.even-better-toml",
 				"donjayamanne.githistory",
 				"eamodio.gitlens",
 				"zxh404.vscode-proto3"
@@ -24,13 +25,13 @@
 		}
 	},
 	// "forwardPorts": [10010],
-	"appPort": [
-		"10000-10100:10000-10100"
-	],
+	// "appPort": [
+	//   "10000-10100:10000-10100"
+	// ],
 	// "initializeCommand": "umask 177 && touch /root/.zsh_history",
-	"mounts": [
-		"source=${localEnv:HOME}/.zsh_history,target=/root/.zsh_history,type=bind"
-	],
+	// "mounts": [
+	// 	"source=${localEnv:HOME}/.zsh_history,target=/root/.zsh_history,type=bind"
+	// ],
 	"workspaceMount": "source=${localWorkspaceFolder}/../,target=/workspace,type=bind,consistency=cached",
 	"workspaceFolder": "/workspace",
 	"hostRequirements": {

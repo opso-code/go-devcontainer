@@ -45,3 +45,9 @@ RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v${PROTOB
 # install protoc-gen-go
 ARG PROTO_GEN_GO_VERSION=1.28.0
 RUN go install google.golang.org/protobuf/cmd/protoc-gen-go@v${PROTO_GEN_GO_VERSION}
+
+# install protoc-gen-grpc-gateway
+ARG PROTOC_GEN_GRPC_GATEWAY=2.12.0
+RUN go install \
+    github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@v${PROTOC_GEN_GRPC_GATEWAY} \
+    github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2@v${PROTOC_GEN_GRPC_GATEWAY}
